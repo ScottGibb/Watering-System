@@ -1,0 +1,13 @@
+*.kicad_prl
+*.lck
+~*.kicad_*
+*-backups/
+.DS_Store
+secrets.yaml
+megalinter-reports/
+mega-linter.log
+schematic.pdf
+schematics/
+bom.csv
+netlist.net
+erc.rpt

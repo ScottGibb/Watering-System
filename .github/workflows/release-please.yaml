@@ -1,0 +1,60 @@
+---
+name: Release Please
+"on":
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - name: Prepare release
+        id: release
+        uses: googleapis/release-please-action@v5
+        with:
+          token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN || github.token }}
+          release-type: simple
+
+  kicad:
+    needs: release
+    if: needs.release.outputs.release_created == 'true'
+    uses: ./.github/workflows/kicad.yaml
+
+  attach-kicad-outputs:
+    needs: [release, kicad]
+    if: needs.release.outputs.release_created == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download schematic outputs
+        uses: actions/download-artifact@v4
+        with:
+          name: watering-system-schematic
+          path: release-assets/watering-system-schematic
+      - name: Download ERC report
+        uses: actions/download-artifact@v4
+        with:
+          name: erc-report
+          path: release-assets/erc-report
+      - name: Attach KiCad outputs to the release
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ needs.release.outputs.tag_name }}
+          fail_on_unmatched_files: true
+          files: |
+            release-assets/watering-system-schematic/schematic.pdf
+            release-assets/watering-system-schematic/schematics/*.svg
+            release-assets/watering-system-schematic/bom.csv
+            release-assets/watering-system-schematic/netlist.net
+            release-assets/erc-report/erc.rpt
+            # Board/PCB release assets intentionally disabled for now:
+            # release-assets/watering-system-board/pcb.pdf
+            # release-assets/watering-system-board/gerbers/**

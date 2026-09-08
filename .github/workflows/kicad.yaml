@@ -1,0 +1,48 @@
+---
+name: KiCad
+"on":
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  schematic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check and export schematic
+        uses: actions-for-kicad/kicad-actions@v2-k10.0.5
+        with:
+          project_file_name: watering-system.kicad_pro
+          schematic_file_name: watering-system.kicad_sch
+          run_erc: true
+          schematic_output_pdf: true
+          schematic_output_svg: true
+          schematic_output_bom: true
+          schematic_output_netlist: true
+          # Board/PCB processing is disabled for this schematic-only project:
+          # pcb_file_name: watering-system.kicad_pcb
+          # run_drc: true
+          # pcb_output_gerbers_and_drill: true
+      - name: Upload schematic outputs
+        uses: actions/upload-artifact@v7
+        with:
+          name: watering-system-schematic
+          if-no-files-found: error
+          path: |
+            schematic.pdf
+            schematics/*.svg
+            bom.csv
+            netlist.net
+      - name: Upload ERC report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: erc-report
+          path: erc.rpt
+          if-no-files-found: error
