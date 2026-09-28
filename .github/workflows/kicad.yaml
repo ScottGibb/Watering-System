@@ -25,7 +25,7 @@ jobs:
         board: >-
           ${{ fromJSON(inputs.boards || '["main-board", "connector-board"]') }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           submodules: recursive
       - name: Check and export schematic
