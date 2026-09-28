@@ -6,33 +6,44 @@ name: KiCad
   pull_request:
   workflow_dispatch:
   workflow_call:
+    inputs:
+      boards:
+        description: JSON array of board directories to check and export
+        type: string
+        default: '["main-board", "connector-board"]'
 
 permissions:
   contents: read
 
 jobs:
   schematic:
+    name: Schematic (${{ matrix.board }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        board: >-
+          ${{ fromJSON(inputs.boards || '["main-board", "connector-board"]') }}
     steps:
       - uses: actions/checkout@v6
+        with:
+          submodules: recursive
       - name: Check and export schematic
         uses: actions-for-kicad/kicad-actions@v2-k10.0.5
         with:
-          project_file_name: watering-system.kicad_pro
-          schematic_file_name: watering-system.kicad_sch
+          project_file_name: ${{ matrix.board }}/${{ matrix.board }}.kicad_pro
+          schematic_file_name: ${{ matrix.board }}/${{ matrix.board }}.kicad_sch
           run_erc: true
           schematic_output_pdf: true
           schematic_output_svg: true
           schematic_output_bom: true
           schematic_output_netlist: true
-          # Board/PCB processing is disabled for this schematic-only project:
-          # pcb_file_name: watering-system.kicad_pcb
-          # run_drc: true
-          # pcb_output_gerbers_and_drill: true
+          # PCB checks and fabrication outputs remain disabled.
       - name: Upload schematic outputs
         uses: actions/upload-artifact@v7
         with:
-          name: watering-system-schematic
+          name: ${{ matrix.board }}-schematic
+          retention-days: 7
           if-no-files-found: error
           path: |
             schematic.pdf
@@ -43,6 +54,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: erc-report
+          name: ${{ matrix.board }}-erc-report
+          retention-days: 7
           path: erc.rpt
           if-no-files-found: error

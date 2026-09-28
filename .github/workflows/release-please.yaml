@@ -14,47 +14,57 @@ jobs:
   release:
     runs-on: ubuntu-latest
     outputs:
-      release_created: ${{ steps.release.outputs.release_created }}
-      tag_name: ${{ steps.release.outputs.tag_name }}
+      releases_created: ${{ steps.release.outputs.releases_created }}
+      paths_released: ${{ steps.release.outputs.paths_released }}
+      main_board_tag: ${{ steps.release.outputs['main-board--tag_name'] }}
+      connector_board_tag: >-
+        ${{ steps.release.outputs['connector-board--tag_name'] }}
     steps:
-      - name: Prepare release
+      - name: Prepare releases
         id: release
         uses: googleapis/release-please-action@v5
         with:
           token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN || github.token }}
-          release-type: simple
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
 
   kicad:
     needs: release
-    if: needs.release.outputs.release_created == 'true'
+    if: needs.release.outputs.releases_created == 'true'
     uses: ./.github/workflows/kicad.yaml
+    with:
+      boards: ${{ needs.release.outputs.paths_released }}
 
   attach-kicad-outputs:
     needs: [release, kicad]
-    if: needs.release.outputs.release_created == 'true'
+    if: needs.release.outputs.releases_created == 'true'
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        board: ${{ fromJSON(needs.release.outputs.paths_released) }}
     steps:
       - name: Download schematic outputs
         uses: actions/download-artifact@v4
         with:
-          name: watering-system-schematic
-          path: release-assets/watering-system-schematic
+          name: ${{ matrix.board }}-schematic
+          path: release-assets/schematic
       - name: Download ERC report
         uses: actions/download-artifact@v4
         with:
-          name: erc-report
+          name: ${{ matrix.board }}-erc-report
           path: release-assets/erc-report
-      - name: Attach KiCad outputs to the release
+      - name: Attach KiCad outputs to the board release
         uses: softprops/action-gh-release@v3
         with:
-          tag_name: ${{ needs.release.outputs.tag_name }}
+          tag_name: >-
+            ${{ matrix.board == 'main-board' &&
+            needs.release.outputs.main_board_tag ||
+            needs.release.outputs.connector_board_tag }}
           fail_on_unmatched_files: true
           files: |
-            release-assets/watering-system-schematic/schematic.pdf
-            release-assets/watering-system-schematic/schematics/*.svg
-            release-assets/watering-system-schematic/bom.csv
-            release-assets/watering-system-schematic/netlist.net
+            release-assets/schematic/schematic.pdf
+            release-assets/schematic/schematics/*.svg
+            release-assets/schematic/bom.csv
+            release-assets/schematic/netlist.net
             release-assets/erc-report/erc.rpt
-            # Board/PCB release assets intentionally disabled for now:
-            # release-assets/watering-system-board/pcb.pdf
-            # release-assets/watering-system-board/gerbers/**

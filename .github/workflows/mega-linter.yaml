@@ -24,9 +24,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload lint reports
-        if: always()
+        if: failure()
         uses: actions/upload-artifact@v7
         with:
           name: megalinter-reports
+          retention-days: 7
           path: megalinter-reports/
           if-no-files-found: warn
