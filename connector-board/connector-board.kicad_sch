@@ -5,7 +5,7 @@
 	(uuid "97006c64-4d9a-49c1-90c8-c7dde4458483")
 	(paper "A4")
 	(title_block
-		(title "Watering System Daughterboard")
+		(title "Connector Board")
 		(rev "See GitHub")
 		(comment 3 "into smaller cables for individual plants")
 		(comment 4 "A connector board used to split the main cable")
@@ -2956,7 +2956,7 @@
 			(uuid "253199c9-5e5e-4b13-97f4-6441b5f5e860")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR017")
 					(unit 1)
@@ -3035,7 +3035,7 @@
 			(uuid "25132b50-3a97-46d7-aa83-f2fe05181826")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR022")
 					(unit 1)
@@ -3114,7 +3114,7 @@
 			(uuid "5ada6794-c6d9-485c-b9db-b83c24b076fb")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR015")
 					(unit 1)
@@ -3193,7 +3193,7 @@
 			(uuid "1fc3aa24-503d-4f4b-8eed-53b78a3c85a1")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR020")
 					(unit 1)
@@ -3272,7 +3272,7 @@
 			(uuid "3ba1c65c-70cd-44f7-a252-83c0716c678c")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR019")
 					(unit 1)
@@ -3351,7 +3351,7 @@
 			(uuid "2a07d780-74fb-487b-91c6-4b3ed70a004b")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR09")
 					(unit 1)
@@ -3436,7 +3436,7 @@
 			(uuid "2a6bd881-8659-427c-aef5-b2180aa66c52")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "J10")
 					(unit 1)
@@ -3518,7 +3518,7 @@
 			(uuid "56e62493-eda8-46d7-9bac-86c4880ee583")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "J6")
 					(unit 1)
@@ -3597,7 +3597,7 @@
 			(uuid "490f7d0d-5e4d-4e14-a817-b6f223e0d87c")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR01")
 					(unit 1)
@@ -3676,7 +3676,7 @@
 			(uuid "3b822e31-9367-44a4-bed2-ef5d7f71da3e")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR011")
 					(unit 1)
@@ -3755,7 +3755,7 @@
 			(uuid "27e1332d-83b5-4bc9-8e7f-0fbead982b89")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR012")
 					(unit 1)
@@ -3834,7 +3834,7 @@
 			(uuid "8f8eef6e-c9fa-429d-8ee5-276efd1a309d")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR04")
 					(unit 1)
@@ -3913,7 +3913,7 @@
 			(uuid "1f503efa-0306-44f9-9924-0b65a9456101")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR02")
 					(unit 1)
@@ -3992,7 +3992,7 @@
 			(uuid "0275bea9-618d-42b5-8ca3-fee653c72240")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR07")
 					(unit 1)
@@ -4071,7 +4071,7 @@
 			(uuid "bee409a2-4845-45a8-bdcb-260e9120ab19")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR03")
 					(unit 1)
@@ -4150,7 +4150,7 @@
 			(uuid "d7c49f71-0588-4325-ab8b-e403e81b73c3")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR010")
 					(unit 1)
@@ -4235,7 +4235,7 @@
 			(uuid "598e8397-a484-41f9-b0b7-5cecfcb0b6ab")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "J5")
 					(unit 1)
@@ -4314,7 +4314,7 @@
 			(uuid "fd443be9-cae5-4277-81a5-257e626cc309")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR021")
 					(unit 1)
@@ -4393,7 +4393,7 @@
 			(uuid "77714c99-009f-45f5-8a5f-e8f69d2a177f")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR013")
 					(unit 1)
@@ -4475,7 +4475,7 @@
 			(uuid "f9f58b4f-2848-4ab1-8cb1-b20b86a0221d")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "J2")
 					(unit 1)
@@ -4560,7 +4560,7 @@
 			(uuid "5bb3e946-ce07-4d4d-97c7-6180382d6c69")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "J7")
 					(unit 1)
@@ -4642,7 +4642,7 @@
 			(uuid "98f16f3c-aa80-4df4-b4db-abe4b5e903a5")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "R1")
 					(unit 1)
@@ -4727,7 +4727,7 @@
 			(uuid "0541e9d4-290d-452b-bc47-85e78b20294a")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "J8")
 					(unit 1)
@@ -4805,7 +4805,7 @@
 			(uuid "0f316938-4094-44f2-ba31-afb060d309f7")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR06")
 					(unit 1)
@@ -4883,7 +4883,7 @@
 			(uuid "77765de2-0685-4a81-8e5c-cca5babce46f")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR05")
 					(unit 1)
@@ -4971,7 +4971,7 @@
 			(uuid "d826150d-97a0-4465-a28b-d77f356c2db0")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "J4")
 					(unit 1)
@@ -5090,7 +5090,7 @@
 			(uuid "455b2e2d-40aa-4783-b20a-217669b8d255")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "J1")
 					(unit 1)
@@ -5172,7 +5172,7 @@
 			(uuid "e66b4eaf-36e9-4b4e-9f45-97c9fdd6e455")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "C1")
 					(unit 1)
@@ -5254,7 +5254,7 @@
 			(uuid "9aca2a2e-4c65-46e1-8ec2-358d2b50421e")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "C2")
 					(unit 1)
@@ -5333,7 +5333,7 @@
 			(uuid "428d90a9-d6d4-4207-929e-5576c5bfe503")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR08")
 					(unit 1)
@@ -5415,7 +5415,7 @@
 			(uuid "1456f338-f570-454d-80fd-0db3485b252e")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "J3")
 					(unit 1)
@@ -5494,7 +5494,7 @@
 			(uuid "99b51f95-f365-417e-aee1-818502145428")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR018")
 					(unit 1)
@@ -5572,7 +5572,7 @@
 			(uuid "af42935f-5e23-47f3-9949-5c7e0f45919c")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR014")
 					(unit 1)
@@ -5657,7 +5657,7 @@
 			(uuid "9ad7ad5c-b917-4a49-a89a-eb3272d40004")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "J9")
 					(unit 1)
@@ -5736,7 +5736,7 @@
 			(uuid "67439b94-74d1-4d38-82ed-c88cd6cfca43")
 		)
 		(instances
-			(project "connector_board"
+			(project "connector-board"
 				(path "/97006c64-4d9a-49c1-90c8-c7dde4458483"
 					(reference "#PWR016")
 					(unit 1)

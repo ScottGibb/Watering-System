@@ -5,7 +5,7 @@
 	(uuid "37f9ca20-4a6d-426d-a8d5-c655e0adba86")
 	(paper "A4")
 	(title_block
-		(title "Outdoor Watering System Main Board")
+		(title "Main Board")
 		(date "2026-09-18")
 		(rev "See GitHub")
 		(comment 1 "Main Circuitry for the Watering System")
@@ -6946,7 +6946,7 @@
 			(uuid "5954fe29-e62f-4ece-8ce8-af743008681d")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR04")
 					(unit 1)
@@ -7025,7 +7025,7 @@
 			(uuid "02dfa23f-bf32-456c-8e18-ea1749e408e6")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "R2")
 					(unit 1)
@@ -7120,7 +7120,7 @@
 			(uuid "3b5a3f7c-234a-435e-8380-8b0a5a1b44dd")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "K2")
 					(unit 1)
@@ -7199,7 +7199,7 @@
 			(uuid "09027219-6f5a-4f82-9440-98bb779656f1")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR05")
 					(unit 1)
@@ -7278,7 +7278,7 @@
 			(uuid "b4155f16-fc9d-4914-a760-1cd5ddd97462")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR022")
 					(unit 1)
@@ -7360,7 +7360,7 @@
 			(uuid "f3ce9e94-7b97-4578-9ee8-ac5b4b8267ae")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "C2")
 					(unit 1)
@@ -7438,7 +7438,7 @@
 			(uuid "bbbb300d-031b-4d14-8c09-19243caffddc")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR011")
 					(unit 1)
@@ -7524,7 +7524,7 @@
 			(uuid "b7278c62-1575-4e39-993f-6d177b970dff")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "U3")
 					(unit 1)
@@ -7602,7 +7602,7 @@
 			(uuid "2fe613fc-5105-47c3-83b1-9fe532d5d4a1")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR016")
 					(unit 1)
@@ -7684,7 +7684,7 @@
 			(uuid "d2f2e7ce-1772-43f6-b806-e68d445c3337")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "D3")
 					(unit 1)
@@ -7762,7 +7762,7 @@
 			(uuid "e695e73c-33f5-4a74-9634-917533c6048a")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR010")
 					(unit 1)
@@ -7840,7 +7840,7 @@
 			(uuid "b3b8d8be-0262-4792-9a8a-0937e4c3282f")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR09")
 					(unit 1)
@@ -7922,7 +7922,7 @@
 			(uuid "7765c1aa-89ea-46c2-84b6-97aa17df8d74")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "R1")
 					(unit 1)
@@ -8083,7 +8083,7 @@
 			(uuid "84084931-be89-47ac-a6b2-4ecdf95ea640")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "U1")
 					(unit 1)
@@ -8161,7 +8161,7 @@
 			(uuid "152ec005-4b1f-4239-a8ce-faa0bc122a11")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR029")
 					(unit 1)
@@ -8239,7 +8239,7 @@
 			(uuid "fc59e908-0459-4c51-9e6b-311e2eb77874")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR014")
 					(unit 1)
@@ -8317,7 +8317,7 @@
 			(uuid "07498748-e4fe-4346-a831-71126bff3963")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR030")
 					(unit 1)
@@ -8395,7 +8395,7 @@
 			(uuid "e4afa56e-3158-4611-b773-a213ec10a455")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR019")
 					(unit 1)
@@ -8475,7 +8475,7 @@
 			(uuid "e71c354c-83fc-4fcf-bad8-d878fa2ea587")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "J1")
 					(unit 1)
@@ -8566,7 +8566,7 @@
 			(uuid "005ba2de-7e82-456a-8589-a405629faf34")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "J2")
 					(unit 1)
@@ -8676,7 +8676,7 @@
 			(uuid "2a705fbf-d0f2-4e3e-8cf7-0966972ae98d")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "Q1")
 					(unit 1)
@@ -8755,7 +8755,7 @@
 			(uuid "cba2ae9e-cd75-46d5-a29f-67b329aac7aa")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR032")
 					(unit 1)
@@ -8834,7 +8834,7 @@
 			(uuid "8b0259e2-56e5-4c38-8cc1-187f6e92428d")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR06")
 					(unit 1)
@@ -8916,7 +8916,7 @@
 			(uuid "642edce4-a863-499a-b7f7-caa21e226499")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "C1")
 					(unit 1)
@@ -9026,7 +9026,7 @@
 			(uuid "836781b8-0813-454f-b0dd-7c8b1893075b")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "Q2")
 					(unit 1)
@@ -9105,7 +9105,7 @@
 			(uuid "078b8754-b5a3-4d86-b804-b8415e8d1a78")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "R4")
 					(unit 1)
@@ -9184,7 +9184,7 @@
 			(uuid "6d367b26-baae-4aa9-812c-0ba7d7d179bc")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR02")
 					(unit 1)
@@ -9263,7 +9263,7 @@
 			(uuid "988c4079-88b6-41a9-80a6-1036707f244d")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "R3")
 					(unit 1)
@@ -9341,7 +9341,7 @@
 			(uuid "4f2f59fd-ba68-4e83-b749-c6464ab677e4")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR013")
 					(unit 1)
@@ -9419,7 +9419,7 @@
 			(uuid "f27adb52-15db-4b72-b794-f32dbd0c3047")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR017")
 					(unit 1)
@@ -9497,7 +9497,7 @@
 			(uuid "400db8c7-f33a-455b-ad24-5a33e8641a5e")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR025")
 					(unit 1)
@@ -9621,7 +9621,7 @@
 			(uuid "b1ab1d52-3831-4baf-900c-6c31e2bb5605")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "U2")
 					(unit 1)
@@ -9699,7 +9699,7 @@
 			(uuid "9d92592e-eed6-4d5a-b92b-050a710edfd8")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR01")
 					(unit 1)
@@ -9776,7 +9776,7 @@
 			(uuid "17e8bd59-a49e-4d90-a8bb-b803460ca093")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#FLG02")
 					(unit 1)
@@ -9864,7 +9864,7 @@
 			(uuid "13a73800-9428-4e4c-887f-1423560af3e6")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "J4")
 					(unit 1)
@@ -9942,7 +9942,7 @@
 			(uuid "36ed6464-fb78-4876-b817-71987776da45")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR031")
 					(unit 1)
@@ -10020,7 +10020,7 @@
 			(uuid "2f69cfad-3df1-4f9f-bcad-bf2c11356b8f")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR018")
 					(unit 1)
@@ -10098,7 +10098,7 @@
 			(uuid "6dfd790e-a6ea-479a-b23a-a18ef6c7efca")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR024")
 					(unit 1)
@@ -10176,7 +10176,7 @@
 			(uuid "64a0f90d-552d-4989-9431-d9c19646a637")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR08")
 					(unit 1)
@@ -10255,7 +10255,7 @@
 			(uuid "fd07f827-7357-47ad-b1ae-2937fc8294e3")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR021")
 					(unit 1)
@@ -10334,7 +10334,7 @@
 			(uuid "38b3482f-d3f4-4672-8a60-e8f4307c42f9")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR023")
 					(unit 1)
@@ -10455,7 +10455,7 @@
 			(uuid "fecc9793-8d82-4f98-8d88-8f5c1190ee3d")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "J3")
 					(unit 1)
@@ -10533,7 +10533,7 @@
 			(uuid "f8e8f1e9-7449-4034-9e33-b6176e5d6cab")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#FLG01")
 					(unit 1)
@@ -10612,7 +10612,7 @@
 			(uuid "cf46882d-3440-4b4e-bdbe-5aae7cfa6507")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR020")
 					(unit 1)
@@ -10694,7 +10694,7 @@
 			(uuid "a5a4d4e5-35f8-43ba-8f44-0312c57edd61")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "D2")
 					(unit 1)
@@ -10776,7 +10776,7 @@
 			(uuid "09ddd4db-dbd6-4866-8286-0e4ee2994521")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "R8")
 					(unit 1)
@@ -10855,7 +10855,7 @@
 			(uuid "5895a101-fbec-48f8-92a0-2ca4d1959b5e")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "R6")
 					(unit 1)
@@ -10932,7 +10932,7 @@
 			(uuid "1f42bba9-9ada-4575-88a8-52c705852c96")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR015")
 					(unit 1)
@@ -11010,7 +11010,7 @@
 			(uuid "599ba21e-4078-4e86-a216-bb6ae23cc1a1")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR027")
 					(unit 1)
@@ -11089,7 +11089,7 @@
 			(uuid "8536d271-45d3-4069-9f69-ecb24d85ae51")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "R5")
 					(unit 1)
@@ -11193,7 +11193,7 @@
 			(uuid "f941b7dc-c693-4395-82ce-674f66522f33")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "D1")
 					(unit 1)
@@ -11297,7 +11297,7 @@
 			(uuid "4ad3ddd1-ae48-4c51-af43-c6c5e3d73939")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "D4")
 					(unit 1)
@@ -11376,7 +11376,7 @@
 			(uuid "716abe3a-221b-4c29-ac6a-2a09ed0c27cf")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR012")
 					(unit 1)
@@ -11455,7 +11455,7 @@
 			(uuid "33c4c9ad-7941-4530-87cc-603671c206e7")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "R7")
 					(unit 1)
@@ -11533,7 +11533,7 @@
 			(uuid "57ee17ec-e88a-49a0-8d10-9a1d8eeb28f9")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR028")
 					(unit 1)
@@ -11610,7 +11610,7 @@
 			(uuid "b405cf50-67d0-4d48-aa8e-228c0b0240e3")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR07")
 					(unit 1)
@@ -11688,7 +11688,7 @@
 			(uuid "a040ab09-809e-4948-901a-d53cbdb8ff0f")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR026")
 					(unit 1)
@@ -11766,7 +11766,7 @@
 			(uuid "d98a52ef-ce17-400e-b6e2-bc10399497c1")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "#PWR03")
 					(unit 1)
@@ -11861,7 +11861,7 @@
 			(uuid "bf07dc6b-0ee5-4b09-9c2f-5dcd2271db99")
 		)
 		(instances
-			(project "watering-system"
+			(project "main-board"
 				(path "/37f9ca20-4a6d-426d-a8d5-c655e0adba86"
 					(reference "K3")
 					(unit 1)

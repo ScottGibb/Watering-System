@@ -178,7 +178,7 @@
 		(property ki_fp_filters "D*DO?41*")
 		(path "/d48bdaa3-09c0-44f4-94d7-e18bacefa236")
 		(sheetname "/")
-		(sheetfile "watering-system.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -446,7 +446,7 @@
 		(property ki_fp_filters "Relay*StandexMeder*DIP*LowProfile*")
 		(path "/05b2fb87-221c-46f4-9f83-24b643b032bd")
 		(sheetname "/")
-		(sheetfile "watering-system.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -797,7 +797,7 @@
 		(property ki_fp_filters "D*DO?41*")
 		(path "/d846a892-1180-466f-8c3b-9e71e578df04")
 		(sheetname "/")
-		(sheetfile "watering-system.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -1073,7 +1073,7 @@
 		(property ki_fp_filters "LED*5.0mm*IRGrey*")
 		(path "/1e6e631f-b344-40ec-8801-bbe0b5da1f58")
 		(sheetname "/")
-		(sheetfile "watering-system.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -1277,7 +1277,7 @@
 		(property ki_fp_filters "Relay*StandexMeder*DIP*LowProfile*")
 		(path "/ffbe1c65-1c8f-45f6-99e4-02e9ff66de53")
 		(sheetname "/")
-		(sheetfile "watering-system.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -1628,7 +1628,7 @@
 		(property ki_fp_filters "TO?39*")
 		(path "/4f997d33-0bbe-4595-938d-cdd9f314bba2")
 		(sheetname "/")
-		(sheetfile "watering-system.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -1919,7 +1919,7 @@
 		(property ki_fp_filters "TO?39*")
 		(path "/430afb27-1ac0-4a25-ad4e-458ccd31255c")
 		(sheetname "/")
-		(sheetfile "watering-system.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -2184,7 +2184,7 @@
 		(property ki_fp_filters "LED*5.0mm*IRGrey*")
 		(path "/be1568cc-cb3f-4c33-9664-b78b58dc6c1b")
 		(sheetname "/")
-		(sheetfile "watering-system.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -2381,7 +2381,7 @@
 		)
 		(path "/26cea693-7e7a-4b6e-b740-c89f2b8642e9")
 		(sheetname "/")
-		(sheetfile "watering-system.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(units
 			(unit
 				(name "A")
