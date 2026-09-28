@@ -45,12 +45,12 @@ jobs:
         board: ${{ fromJSON(needs.release.outputs.paths_released) }}
     steps:
       - name: Download schematic outputs
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: ${{ matrix.board }}-schematic
           path: release-assets/schematic
       - name: Download ERC report
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: ${{ matrix.board }}-erc-report
           path: release-assets/erc-report
