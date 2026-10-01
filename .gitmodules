@@ -1,3 +1,6 @@
 [submodule "vendor/kicad-esp8266"]
 	path = vendor/kicad-esp8266
 	url = https://github.com/rocket3989/KiCad.git
+[submodule "vendor/kicad-chinese-modules"]
+	path = vendor/kicad-chinese-modules
+	url = https://github.com/yet-another-average-joe/KiCad-Chinese_Modules.git
