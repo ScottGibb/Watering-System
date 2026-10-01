@@ -1,5 +1,9 @@
 # Watering System
 
+[![KiCad](https://github.com/ScottGibb/Watering-System/actions/workflows/kicad.yaml/badge.svg?branch=main)](https://github.com/ScottGibb/Watering-System/actions/workflows/kicad.yaml)
+[![MegaLinter](https://github.com/ScottGibb/Watering-System/actions/workflows/mega-linter.yaml/badge.svg?branch=main)](https://github.com/ScottGibb/Watering-System/actions/workflows/mega-linter.yaml)
+[![Release Please](https://github.com/ScottGibb/Watering-System/actions/workflows/release-please.yaml/badge.svg?branch=main)](https://github.com/ScottGibb/Watering-System/actions/workflows/release-please.yaml)
+
 Hardware for a watering system split across two boards, linked by a multicore
 cable:
 
