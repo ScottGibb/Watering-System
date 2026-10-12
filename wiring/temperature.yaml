@@ -1,0 +1,64 @@
+---
+metadata:
+  title: Temperature sensor
+  description: >-
+    Board-side pinout from saved KiCad schematic. Device details are
+    confirmed only where noted.
+  notes: >-
+    Incomplete physical specification: see README.md for TBD details
+    and evidence.
+options:
+  fontname: DejaVu Sans
+connectors:
+  connector-board-J5:
+    type: JST 2.54 mm
+    pins:
+      - 1
+      - 2
+      - 3
+    pinlabels:
+      - +3V3
+      - /TEMP_ONE_WIRE
+      - GND
+    notes: >-
+      Female cable connector mating with male PCB header.<br/>Pin numbers
+      follow connector-board J5.
+    ignore_in_bom: false
+  DEVICE:
+    type: DS18B20 integral sensor leads
+    pins:
+      - VCC
+      - DQ
+      - GND
+    pinlabels:
+      - +3V3
+      - SIGNAL / DQ
+      - GND
+    notes: >-
+      Cable wired directly into the sensor.<br/>Functional lead labels;
+      no sensor-side cable connector.
+    ignore_in_bom: true
+cables:
+  W1:
+    type: Cable / logical bundle; construction TBD
+    wirecount: 3
+    notes: "Length: TBD.<br/>Stranded copper conductors."
+    colors:
+      - RD
+      - YE
+      - BK
+    gauge: 28
+    gauge_unit: AWG
+connections:
+  - - connector-board-J5:
+        - 1
+        - 2
+        - 3
+    - W1:
+        - 1
+        - 2
+        - 3
+    - DEVICE:
+        - VCC
+        - DQ
+        - GND

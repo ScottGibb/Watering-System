@@ -1,0 +1,126 @@
+---
+metadata:
+  title: Indoor LDR, PIR and resistive moisture connections
+  description: >-
+    Board-side pinout from saved KiCad schematic. Device details are
+    confirmed only where noted.
+  notes: >-
+    Incomplete physical specification: see README.md for TBD details
+    and evidence.
+options:
+  fontname: DejaVu Sans
+connectors:
+  main-board-J2:
+    type: JST 2.54 mm
+    pins:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    pinlabels:
+      - +3V3
+      - /light_sensor_0
+      - /PIR
+      - /RESISTIVE_MOISTURE
+      - GND
+    notes: >-
+      Female cable connector mating with male PCB header.<br/>Pin numbers
+      follow main-board J2.<br/>3V3 splits into separate sensor cables
+      at this connector.
+    ignore_in_bom: false
+  PIR:
+    type: AM312, female Dupont cable contacts
+    pins:
+      - 1
+      - 2
+      - 3
+    pinlabels:
+      - VCC (3V3)
+      - OUT
+      - GND
+    notes: >-
+      Vault AM312 Mini PIR Sensor.png: 1 VCC / 2 OUT / 3 GND.<br/>Numbering
+      follows the component-side view in that image.<br/>Female cable
+      contacts mate with the AM312 male pins.
+  MOISTURE:
+    type: Female Dupont sensor connection
+    pins:
+      - 1
+      - 2
+    pinlabels:
+      - +3V3
+      - SIGNAL
+    notes: Contact order confirmed by owner.<br/>Female cable connector.
+  LDR:
+    type: LDR leads, direct solder joints
+    pins:
+      - LDR_A
+      - LDR_B
+    pinlabels:
+      - LDR_A
+      - LDR_B
+    notes: >-
+      Wires solder directly to LDR leads.<br/>Passive, non-polarised
+      sensor; A/B identify interchangeable leads.
+    ignore_in_bom: true
+cables:
+  W_LDR:
+    type: Stranded copper sensor cable
+    gauge: 28
+    gauge_unit: AWG
+    notes: "Length: TBD.<br/>3V3 branches at the PCB connector end."
+    wirecount: 2
+    colors:
+      - RD
+      - YE
+  W_PIR:
+    type: Stranded copper sensor cable
+    gauge: 28
+    gauge_unit: AWG
+    notes: "Length: TBD.<br/>3V3 branches at the PCB connector end."
+    wirecount: 3
+    colors:
+      - RD
+      - WH
+      - BK
+  W_MOISTURE:
+    type: Stranded copper sensor cable
+    gauge: 28
+    gauge_unit: AWG
+    notes: "Length: TBD.<br/>3V3 branches at the PCB connector end."
+    wirecount: 2
+    colors:
+      - RD
+      - YE
+connections:
+  - - main-board-J2:
+        - 1
+        - 2
+    - W_LDR:
+        - 1
+        - 2
+    - LDR:
+        - LDR_A
+        - LDR_B
+  - - main-board-J2:
+        - 1
+        - 3
+        - 5
+    - W_PIR:
+        - 1
+        - 2
+        - 3
+    - PIR:
+        - 1
+        - 2
+        - 3
+  - - main-board-J2:
+        - 1
+        - 4
+    - W_MOISTURE:
+        - 1
+        - 2
+    - MOISTURE:
+        - 1
+        - 2

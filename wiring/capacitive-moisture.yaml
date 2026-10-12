@@ -1,0 +1,67 @@
+---
+metadata:
+  title: Capacitive moisture sensor cable (channels 0-3)
+  description: PCB 3V3 / signal / GND to sensor contacts VCC / AOUT
+    / GND.
+  notes: >-
+    Incomplete physical specification: see README.md for TBD details
+    and evidence.
+options:
+  fontname: DejaVu Sans
+connectors:
+  connector-board-J7:
+    type: JST 2.54 mm
+    pins:
+      - 1
+      - 2
+      - 3
+    pinlabels:
+      - +3V3
+      - /capacitive_moisture_0
+      - GND
+    notes: >-
+      Female cable connector mating with male PCB header.<br/>Pin numbers
+      follow connector-board J7.<br/>Repeat for J8/J9/J10 (channels
+      1/2/3).<br/>Pin 2 signal changes with channel; pin order is identical.
+    ignore_in_bom: false
+  SENSOR:
+    type: Female JST 2.54 mm, 3-pin sensor connector
+    pins:
+      - GND
+      - VCC
+      - AOUT
+    pinlabels:
+      - GND
+      - VCC (3V3)
+      - AOUT
+    notes: >-
+      Female JST 2.54 mm cable connector.<br/>Sensor PCB view: components
+      facing you, connector at top,<br/>probe pointing down; left to
+      right GND / VCC / AOUT.<br/>IDs use printed sensor labels, not
+      circuit P1 numbers.<br/>Cable mating face is mirrored relative
+      to the sensor view.
+    ignore_in_bom: false
+cables:
+  W1:
+    type: Cable / logical bundle; construction TBD
+    wirecount: 3
+    notes: "Length: TBD.<br/>Stranded copper conductors."
+    colors:
+      - RD
+      - YE
+      - BK
+    gauge: 28
+    gauge_unit: AWG
+connections:
+  - - connector-board-J7:
+        - 1
+        - 2
+        - 3
+    - W1:
+        - 1
+        - 2
+        - 3
+    - SENSOR:
+        - VCC
+        - AOUT
+        - GND

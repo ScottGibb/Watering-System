@@ -16,6 +16,9 @@ jobs:
     outputs:
       releases_created: ${{ steps.release.outputs.releases_created }}
       paths_released: ${{ steps.release.outputs.paths_released }}
+      boards_released: ${{ steps.route.outputs.boards }}
+      wiring_released: ${{ steps.route.outputs.wiring }}
+      wiring_tag: ${{ steps.release.outputs['wiring--tag_name'] }}
       main_board_tag: ${{ steps.release.outputs['main-board--tag_name'] }}
       connector_board_tag: >-
         ${{ steps.release.outputs['connector-board--tag_name'] }}
@@ -27,22 +30,34 @@ jobs:
           token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN || github.token }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+      - name: Route released components
+        id: route
+        uses: actions/github-script@v8
+        env:
+          PATHS_RELEASED: ${{ steps.release.outputs.paths_released || '[]' }}
+        with:
+          script: |
+            const paths = JSON.parse(process.env.PATHS_RELEASED);
+            const boards = paths.filter(path =>
+              ['main-board', 'connector-board'].includes(path));
+            core.setOutput('boards', JSON.stringify(boards));
+            core.setOutput('wiring', String(paths.includes('wiring')));
 
   kicad:
     needs: release
-    if: needs.release.outputs.releases_created == 'true'
+    if: needs.release.outputs.boards_released != '[]'
     uses: ./.github/workflows/kicad.yaml
     with:
-      boards: ${{ needs.release.outputs.paths_released }}
+      boards: ${{ needs.release.outputs.boards_released }}
 
   attach-kicad-outputs:
     needs: [release, kicad]
-    if: needs.release.outputs.releases_created == 'true'
+    if: needs.release.outputs.boards_released != '[]'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        board: ${{ fromJSON(needs.release.outputs.paths_released) }}
+        board: ${{ fromJSON(needs.release.outputs.boards_released) }}
     steps:
       - name: Download schematic outputs
         uses: actions/download-artifact@v8
@@ -68,3 +83,25 @@ jobs:
             release-assets/schematic/bom.csv
             release-assets/schematic/netlist.net
             release-assets/erc-report/erc.rpt
+
+  wireviz:
+    needs: release
+    if: needs.release.outputs.wiring_released == 'true'
+    uses: ./.github/workflows/wireviz.yaml
+
+  attach-wiring-outputs:
+    needs: [release, wireviz]
+    if: needs.release.outputs.wiring_released == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download wiring outputs
+        uses: actions/download-artifact@v8
+        with:
+          name: wiring-diagrams
+          path: release-assets/wiring
+      - name: Attach wiring package to the wiring release
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ needs.release.outputs.wiring_tag }}
+          fail_on_unmatched_files: true
+          files: release-assets/wiring/wiring.zip

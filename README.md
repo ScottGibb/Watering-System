@@ -1,6 +1,7 @@
 # Watering System
 
 [![KiCad](https://github.com/ScottGibb/Watering-System/actions/workflows/kicad.yaml/badge.svg?branch=main)](https://github.com/ScottGibb/Watering-System/actions/workflows/kicad.yaml)
+[![WireViz](https://github.com/ScottGibb/Watering-System/actions/workflows/wireviz.yaml/badge.svg?branch=main)](https://github.com/ScottGibb/Watering-System/actions/workflows/wireviz.yaml)
 [![MegaLinter](https://github.com/ScottGibb/Watering-System/actions/workflows/mega-linter.yaml/badge.svg?branch=main)](https://github.com/ScottGibb/Watering-System/actions/workflows/mega-linter.yaml)
 [![Release Please](https://github.com/ScottGibb/Watering-System/actions/workflows/release-please.yaml/badge.svg?branch=main)](https://github.com/ScottGibb/Watering-System/actions/workflows/release-please.yaml)
 
@@ -15,6 +16,9 @@ cable:
 Each folder contains a matching `.kicad_pro`, `.kicad_sch`, and `.kicad_pcb`.
 Use KiCad 10 to open the projects. CI currently checks and releases schematics;
 PCB checks and fabrication outputs are not enabled.
+
+[Wiring harnesses](wiring/README.md) are maintained separately in `wiring/` using
+WireViz, including confirmed pin mappings and explicitly unresolved physical details.
 
 ## KiCad libraries and drawing sheets
 
@@ -47,6 +51,7 @@ Connector Board retains its embedded copy of the drawing sheet.
 CI runs ERC for both boards and exports schematic PDFs, SVGs, BOMs, and netlists.
 Artifacts are named per board and retained for seven days. MegaLinter checks
 Markdown, YAML, JSON, and workflows.
+WireViz builds harness diagrams and BOMs, with seven-day artifact retention.
 
 ## Independent board releases
 
@@ -57,3 +62,5 @@ releases for each board. Tags use `main-board-v1.0.0` and
 Use conventional commits such as `fix(main-board): correct sensor wiring`.
 Changed file paths determine which board is released. After successful KiCad
 checks, each release receives its own schematic exports and ERC report.
+Wiring has an independent version and changelog with `wiring-v*` tags; its releases
+receive a ZIP of harness YAML, diagrams and BOMs.

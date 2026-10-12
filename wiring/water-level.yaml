@@ -1,0 +1,78 @@
+---
+metadata:
+  title: RCWL-1670 water-level sensor
+  description: >-
+    Board-side pinout from saved KiCad schematic. Device details are
+    confirmed only where noted.
+  notes: >-
+    Incomplete physical specification: see README.md for TBD details
+    and evidence.
+options:
+  fontname: DejaVu Sans
+connectors:
+  connector-board-J4:
+    type: JST 2.54 mm
+    pins:
+      - 1
+      - 2
+      - 3
+      - 4
+    pinlabels:
+      - +3V3
+      - /ULTRASONIC_TRIG
+      - /ULTRASONIC_ECHO
+      - GND
+    notes: >-
+      Female cable connector mating with male PCB header.<br/>Pin numbers
+      follow connector-board J4.
+    ignore_in_bom: false
+  DEVICE:
+    type: Male SM 4-pin cable connector, 2.5 mm
+    pins:
+      - SUPPLY
+      - RX
+      - TX
+      - GND
+    pinlabels:
+      - SUPPLY (3.3 V)
+      - RX / TRIG
+      - TX / ECHO
+      - GND
+    notes: >-
+      Male connector from YIXISI SM kit, Amazon B08JV9DXM6.<br/>RCWL-1670
+      image, transducer face with pads below:<br/>left to right GND
+      / RX (trigger) / TX (echo) / VCC.<br/>Rear component face, connector
+      below: VCC / TX / RX / GND.<br/>Functional IDs shown; the added
+      SM connector is not pictured,<br/>so its cavity numbering remains
+      TBD.
+    ignore_in_bom: false
+cables:
+  W1:
+    type: Cable / logical bundle; construction TBD
+    wirecount: 4
+    notes: >-
+      Length: TBD.<br/>Stranded copper conductors. <br/>Ultrasonic
+      trigger/echo colours: TBD; uncoloured lines are placeholders.
+    colors:
+      - RD
+      - ""
+      - ""
+      - BK
+    gauge: 28
+    gauge_unit: AWG
+connections:
+  - - connector-board-J4:
+        - 1
+        - 2
+        - 3
+        - 4
+    - W1:
+        - 1
+        - 2
+        - 3
+        - 4
+    - DEVICE:
+        - SUPPLY
+        - RX
+        - TX
+        - GND

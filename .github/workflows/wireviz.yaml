@@ -1,0 +1,50 @@
+---
+name: WireViz
+"on":
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  harnesses:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v7
+        with:
+          python-version: "3.12"
+      - name: Install Graphviz
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes graphviz fonts-dejavu-core zip
+      - name: Render and package harnesses
+        run: |
+          mkdir -p wiring/output
+          uvx --from wireviz==0.4.1 wireviz -f hpst \
+            -o wiring/output wiring/*.yaml
+          for source in wiring/*.yaml; do
+            name=$(basename "$source" .yaml)
+            for suffix in svg png html bom.tsv; do
+              test -s "wiring/output/$name.$suffix"
+            done
+          done
+          zip wiring/output/wiring.zip wiring/*.yaml wiring/README.md \
+            wiring/output/*.svg wiring/output/*.png \
+            wiring/output/*.html wiring/output/*.bom.tsv
+      - name: Upload wiring outputs
+        uses: actions/upload-artifact@v7
+        with:
+          name: wiring-diagrams
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            wiring/output/*.svg
+            wiring/output/*.png
+            wiring/output/*.html
+            wiring/output/*.bom.tsv
+            wiring/output/wiring.zip

@@ -1,0 +1,65 @@
+---
+metadata:
+  title: Main Board power input
+  description: 6 V cable between PCB and barrel-adapter screw terminals.
+  notes: >-
+    Incomplete physical specification: see README.md for TBD details
+    and evidence.
+options:
+  fontname: DejaVu Sans
+connectors:
+  main-board-J1:
+    type: Blue PCB two-way screw terminal, approx. 5.2 mm
+    pins:
+      - 1
+      - 2
+    pinlabels:
+      - VCC
+      - GND
+    notes: >-
+      Blue veroboard screw terminal, approximately 5.2 mm per owner.<br/>Exact
+      pitch/part: TBD.<br/>Pins 1 VCC / 2 GND follow saved schematic
+      J1.<br/>Saved schematic uses a barrel-jack symbol; physical termination
+      overrides that symbol.
+    ignore_in_bom: false
+  SUPPLY:
+    type: DC barrel adapter, two-way screw terminal
+    pins:
+      - +
+      - "-"
+    pinlabels:
+      - + (6 V, centre)
+      - "- (GND, outer barrel)"
+    notes: >-
+      Marked + / - screw terminals confirmed by owner.<br/>Documented
+      adapter type: + to centre pin; - to outer barrel.<br/>Source:
+      pololu.com/product/2449.<br/>Barrel size: TBD.
+    ignore_in_bom: false
+cables:
+  W1:
+    type: Cable / logical bundle; construction TBD
+    wirecount: 2
+    notes: >-
+      Length: TBD.<br/>Stranded copper conductors.<br/>Ferrule on each
+      conductor at both ends: four total.<br/>Small white-insulated
+      ferrules.<br/>Exact ferrule size and part number: TBD. <br/>6
+      V positive colour: N/A; ground: black.
+    additional_components:
+      - type: White-insulated wire-end ferrule
+        subtype: Small; exact size and part number TBD
+        qty: 4
+    colors:
+      - ""
+      - BK
+    gauge: 22
+    gauge_unit: AWG
+connections:
+  - - main-board-J1:
+        - 1
+        - 2
+    - W1:
+        - 1
+        - 2
+    - SUPPLY:
+        - +
+        - "-"

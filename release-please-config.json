@@ -9,6 +9,11 @@
       "package-name": "Main Board",
       "initial-version": "1.0.0"
     },
+    "wiring": {
+      "component": "wiring",
+      "package-name": "Wiring Harnesses",
+      "initial-version": "1.0.0"
+    },
     "connector-board": {
       "component": "connector-board",
       "package-name": "Connector Board",

@@ -1,0 +1,160 @@
+---
+metadata:
+  title: Main Board to Connector Board - HD15
+  description: Male-to-male HD15 cable, all 15 pins wired straight-through.
+  notes: >-
+    Incomplete physical specification: see README.md for TBD details
+    and evidence.
+options:
+  fontname: DejaVu Sans
+connectors:
+  main-board-J3:
+    type: HD15 / DE-15 D-sub, 3 rows
+    pins:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+    pinlabels:
+      - +3V3
+      - GND
+      - /PUMP_PWR_0
+      - GND
+      - /PUMP_PWR_1
+      - GND
+      - /ULTRASONIC_TRIG
+      - /ULTRASONIC_ECHO
+      - /light_sensor_1
+      - /TEMP_ONE_WIRE
+      - /capacitive_moisture_0
+      - /capacitive_moisture_1
+      - /capacitive_moisture_2
+      - /capacitive_moisture_3
+      - /MUX_A7_IN (spare)
+    notes: Male cable connector.<br/>Pin numbering follows Main Board
+      J3.
+    ignore_in_bom: false
+  connector-board-J1:
+    type: HD15 / DE-15 D-sub, 3 rows
+    pins:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+    pinlabels:
+      - +3V3
+      - GND
+      - /PUMP_PWR_0
+      - GND
+      - /PUMP_PWR_1
+      - GND
+      - /ULTRASONIC_TRIG
+      - /ULTRASONIC_ECHO
+      - /light_sensor_1
+      - /TEMP_ONE_WIRE
+      - /capacitive_moisture_0
+      - /capacitive_moisture_1
+      - /capacitive_moisture_2
+      - /capacitive_moisture_3
+      - NC (spare)
+    notes: Male cable connector.<br/>Pin 15 is unconnected on the PCB.
+    ignore_in_bom: false
+cables:
+  W1:
+    type: Cable / logical bundle; construction TBD
+    wirecount: 15
+    notes: >-
+      Length: TBD.<br/>Stranded copper conductors.<br/>Pins 1-15: confirmed
+      straight-through.<br/>Pin 15 has a fitted conductor; Connector
+      Board pin 15 is NC.<br/>Spare pin 15 colour: N/A.<br/>Shield
+      and shell connection: TBD. <br/>Ultrasonic trigger/echo colours:
+      TBD; uncoloured lines are placeholders.
+    colors:
+      - RD
+      - BK
+      - BU
+      - BK
+      - BU
+      - BK
+      - ""
+      - ""
+      - YE
+      - YE
+      - YE
+      - YE
+      - YE
+      - YE
+      - ""
+    gauge: 28
+    gauge_unit: AWG
+connections:
+  - - main-board-J3:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+    - W1:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+    - connector-board-J1:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
