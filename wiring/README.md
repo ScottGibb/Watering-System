@@ -13,6 +13,10 @@ mkdir -p wiring/output
 wireviz -f hpst -o wiring/output wiring/*.yaml
 ```
 
+With Nix, run `nix develop` instead of installing tools, then use the WireViz
+command above. Launch `code .` from that shell for the recommended WireViz Preview
+extension (F8). You can also use `nix run . -- -o wiring/output wiring/pump.yaml`.
+
 Outputs are HTML, SVG, PNG and TSV BOMs in `output/` (ignored by Git).
 CI uses uv and attaches `wiring.zip` to independent `wiring-v*` releases.
 
@@ -53,3 +57,5 @@ Barrel CAD reference: [female screw-terminal adapter](https://grabcad.com/librar
 (previous chat identified 5.5 × 2.1 mm; physical size unverified).
 
 HD15 pins 1–15 are wired straight-through; Connector Board pin 15 is NC. Unknown cable lengths appear as zero in WireViz BOMs.
+
+Reusable skill: [wireviz-harnesses](../skills/wireviz-harnesses/SKILL.md).
