@@ -9,7 +9,6 @@
 
 ![System Diagram](./docs/system-diagram.drawio.svg)
 
-
 Hardware for a watering system split across two boards, linked by a multicore
 cable:
 
@@ -24,6 +23,42 @@ PCB checks and fabrication outputs are not enabled.
 
 [Wiring harnesses](wiring/README.md) are maintained separately in `wiring/` using
 WireViz, including confirmed pin mappings and explicitly unresolved physical details.
+
+## Veroboards and Pictures
+
+The populated main veroboard, ESP8266 controller and relay modules installed in
+the electronics case:
+
+![Populated main veroboard and relay modules inside the electronics case](docs/main-veroboard.jpeg)
+
+## CAD files
+
+CAD files and printable parts for the watering-system cases:
+
+| Case | Thingiverse | Printables |
+| --- | --- | --- |
+| Veroboard Ribbon Enclosure | [Files](https://www.thingiverse.com/thing:7423750) | [Files](https://www.printables.com/model/1882002) |
+| Plant Pot PIR Sensor Case | [Files](https://www.thingiverse.com/thing:7423472) | [Files](https://www.printables.com/model/1880769) |
+| Plant Pot Electronics Case | [Files](https://www.thingiverse.com/thing:7423784) | [Files](https://www.printables.com/model/1882130) |
+
+These listings were last recorded as drafts; links may be unavailable until
+the models are published.
+
+## External hardware
+
+Component links and references for the build. Supplier examples are not a
+complete BOM; check supply voltage, pinout and dimensions against the wiring
+documentation and your actual parts.
+
+- **Moisture sensors:** [capacitive soil moisture sensor](https://thepihut.com/products/capacitive-soil-moisture-sensor)
+  for the outdoor probes; the indoor probe uses a resistive sensor.
+- **Relays:** two HL-51 V1.0 single-channel modules
+  ([module CAD reference](https://grabcad.com/library/relay-module-1-1)).
+- **Water pumps:** two low-voltage DC pumps
+  ([example submersible pump](https://thepihut.com/collections/maker-store/products/submersible-3v-dc-water-pump-vertical-type));
+  the exact installed pump model is unconfirmed.
+- **PIR sensor:** [AM312 mini PIR sensor](https://247geek.co.uk/am312).
+- **ESP8266 controller:** [NodeMCU LoLin V3 board examples](https://www.az-delivery.uk/collections/nodemcu).
 
 ## KiCad libraries and drawing sheets
 
