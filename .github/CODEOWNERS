@@ -1,0 +1,5 @@
+# Default owner for all repository files.
+* @ScottGibb
+
+# Workflows do not require a code owner review.
+.github/workflows/
