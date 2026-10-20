@@ -3,27 +3,31 @@ name: Dependabot Auto Merge
 "on":
   pull_request:
     branches: [main]
+    types: [opened, synchronize, reopened, labeled]
 
 permissions:
   contents: write
   pull-requests: write
 
 jobs:
-  merge-github-actions:
+  merge-non-semver:
     if: >-
-      github.actor == 'dependabot[bot]' &&
-      contains(join(github.event.pull_request.labels.*.name), 'github_actions')
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      (contains(github.event.pull_request.labels.*.name, 'github_actions') ||
+       contains(github.event.pull_request.labels.*.name, 'submodules'))
     runs-on: ubuntu-latest
     steps:
       - uses: fastify/github-action-merge-dependabot@v3
         with:
           github-token: ${{ secrets.dependabot }}
           merge-method: rebase
+          use-github-auto-merge: true
 
   merge-semver-minor:
     if: >-
-      github.actor == 'dependabot[bot]' &&
-      !contains(join(github.event.pull_request.labels.*.name), 'github_actions')
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      !contains(github.event.pull_request.labels.*.name, 'github_actions') &&
+      !contains(github.event.pull_request.labels.*.name, 'submodules')
     runs-on: ubuntu-latest
     steps:
       - uses: fastify/github-action-merge-dependabot@v3
@@ -31,3 +35,4 @@ jobs:
           github-token: ${{ secrets.dependabot }}
           merge-method: rebase
           target: minor
+          use-github-auto-merge: true
