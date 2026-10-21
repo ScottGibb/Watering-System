@@ -13,9 +13,14 @@ mkdir -p wiring/output
 wireviz -f hpst -o wiring/output wiring/*.yaml
 ```
 
-With Nix, run `nix develop` instead of installing tools, then use the WireViz
-command above. Launch `code .` from that shell for the recommended WireViz Preview
-extension (F8). You can also use `nix run . -- -o wiring/output wiring/pump.yaml`.
+With Nix, render all harnesses from the repository root:
+
+```sh
+nix run .#render-wiring
+```
+
+Or run `render-wiring` inside `nix develop`. Launch `code .` from that shell
+for the recommended WireViz Preview extension (F8).
 
 Outputs are HTML, SVG, PNG and TSV BOMs in `output/` (ignored by Git).
 CI uses uv and attaches `wiring.zip` to independent `wiring-v*` releases.
